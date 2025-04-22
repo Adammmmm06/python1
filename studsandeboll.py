@@ -3,7 +3,7 @@ Task
 
 Make the circle stay inside of the window.
 '''
-# hej
+
 
 import pygame
  
@@ -77,3 +77,5 @@ while is_running:
  
 # Clean up when the game exits.
 pygame.quit()
+
+# jag ar klar
