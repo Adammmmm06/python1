@@ -77,6 +77,9 @@ while is_running:
     if bird_y > size[1] - bird_image.get_height():
         bird_y = size[1] - bird_image.get_height()
 
+    bird_rect = pygame.Rect(bird_x, bird_y, bird_image.get_width(), bird_image.get_height())
+
+
     # Check for collision between the bird and the box.
     if box.colliderect(bird_image.get_rect(topleft=(bird_x, bird_y))):
         box_color = RED
