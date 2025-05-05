@@ -13,7 +13,7 @@ import pygame
 # Define colors.
 RED = (255, 0, 0)
 GREEN = (0, 255, 0)
-SKY_BLUE = (135, 206, 235)
+SKY_BLUE = (135, 206, 233)
 
 # Initialize all imported pygame modules.
 pygame.init()
@@ -61,12 +61,28 @@ while is_running:
     keys = pygame.key.get_pressed()
     if keys[pygame.K_LEFT]:
         bird_x -= bird_speed
+        # kollision medför gå tillbaka
+        # Check for collision between the bird and the box.
+        if box.colliderect(bird_image.get_rect(topleft=(bird_x, bird_y))):
+            bird_x += bird_speed
     if keys[pygame.K_RIGHT]:
         bird_x += bird_speed
+         # kollision medför gå tillbaka
+        # Check for collision between the bird and the box.
+        if box.colliderect(bird_image.get_rect(topleft=(bird_x, bird_y))):
+            bird_x -= bird_speed
     if keys[pygame.K_UP]:
         bird_y -= bird_speed
+         # kollision medför gå tillbaka
+        # Check for collision between the bird and the box.
+        if box.colliderect(bird_image.get_rect(topleft=(bird_x, bird_y))):
+            bird_y += bird_speed
     if keys[pygame.K_DOWN]:
         bird_y += bird_speed
+         # kollision medför gå tillbaka
+        # Check for collision between the bird and the box.
+        if box.colliderect(bird_image.get_rect(topleft=(bird_x, bird_y))):
+            bird_y -= bird_speed
 
     if bird_x < 0:
         bird_x = 0
