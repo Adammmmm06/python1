@@ -3,9 +3,7 @@
 # Check that the box goes red when it collides with the bird.
 # Make it impossible for the bird to move into the box. 
 #  Hint: Move the bird back to its previous position.
-# Add a second box to the game.
-# Make it impossible for the bird to move into the second box.
-# Which changes do you need to make if you want to add another ten boxes to the game?
+# Make it impossible for the bird to move into the first box.
 
 
 import pygame
@@ -110,6 +108,7 @@ while is_running:
     pygame.display.update()  # or pygame.display.flip()
     # --- Increase game time
     clock.tick(60)  # 60 frames per second
+
 
 # Clean up when the game exits.
 pygame.quit()
