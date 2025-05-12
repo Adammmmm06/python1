@@ -1,12 +1,13 @@
-from random import randint
-random_number = randint(1, 3)
+import random
 
-print("Jag tänker på ett tal mellan 1 och 3")
+hemligt_nummer = random.randint(0, 100)
+försök_kvar = 10
 
-guess = int(input("Gissa vilket tal jag tänker på!"))
+print("Välkommen till gissa numret-spelet!")
+print("Jag tänker på ett nummer mellan 0 och 100. Du har 10 försök.")
 
-if guess == random_number:
-  print("Snyggt jobbat! Det var rätt!")
-else:
-  print("Tyvärr, det var fel.")
+while försök_kvar > 0:
+    gissning = input("Gissa ett nummer: ")
 
+    if gissning.isdigit():
+        gissning = int(gissning)
